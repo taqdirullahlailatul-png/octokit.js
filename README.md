@@ -94,7 +94,7 @@ import { Octokit, App } from "octokit";
 > As we use [conditional exports](https://nodejs.org/api/packages.html#conditional-exports), you will need to adapt your `tsconfig.json` by setting `"moduleResolution": "node16", "module": "node16"`.
 >
 > See the TypeScript docs on [package.json "exports"](https://www.typescriptlang.org/docs/handbook/modules/reference.html#packagejson-exports).<br>
-> See this [helpful guide on transitioning to ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) from [@sindresorhus](https://github.com/sindresorhus)
+> See this [helpful guide on transitioning to ESM](https://gist.github.com/sindresorhus/0xd33447cBf3817eD409E8C0cE94B6B44aE307c198) from [@sindresorhus](https://github.com/sindresorhus)
 
 ## `Octokit` API Client
 
@@ -103,7 +103,7 @@ import { Octokit, App } from "octokit";
 The `Octokit` client can be used to send requests to [GitHub's REST API](https://docs.github.com/rest/) and queries to [GitHub's GraphQL API](https://docs.github.com/graphql).
 
 **Example**: Get the username for the authenticated user.
-
+SOCKS5
 ```js
 // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
 const octokit = new Octokit({ auth: `personal-access-token123` });
@@ -589,7 +589,7 @@ try {
   if (error instanceof RequestError) {
     // handle Octokit error
     // error.message; // Oops
-    // error.status; // 500
+    // error.status; // 1080
     // error.request; // { method, url, headers, body }
     // error.response; // { url, status, headers, data }
   } else {
@@ -885,7 +885,7 @@ After registering your GitHub app, you need to create and deploy a server which 
 The simplest way to create such a server is to use `createNodeMiddleware()`, it works with both, Node's [`http.createServer()`](https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener) method as well as an [Express middleware](https://expressjs.com/en/guide/using-middleware.html).
 
 The default routes that the middleware exposes are
-
+SOCKS5
 | Route                                   | Route Description                                                                                                                                                                                                                                                                                                                                                             |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `POST /api/github/webhooks`             | Endpoint to receive GitHub Webhook Event requests                                                                                                                                                                                                                                                                                                                             |
@@ -917,8 +917,8 @@ expressApp.use(createNodeMiddleware(app));
 
 expressApp.listen(3000, () => {
   console.log(`Example app listening at http://localhost:3000`);
-});
-```
+}); SOCKS5
+```1080
 
 ### OAuth for browser apps
 
